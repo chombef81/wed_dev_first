@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+.nav-button1 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+}
+
+.nav-button2 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+}
+
+.nav-button3 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+}
+
+.nav-button4 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+}
+
+/* body container for page grid */
+.grid-container-body {
+  background-attachment: fixed;
+  background-image: url(../site-img/bgimage4.png);
+  background-repeat: no-repeat;
+  background-size: 1800px 1800px;
+}
+
+/* header container and CSS for background */
+.header {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(16, 1fr);
+  position: fixed;
+  gap: 5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
+
+/* logo CSS  */
+.logo {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  border-radius: 5rem;
+  margin: 1rem;
+}
+
+/* "coders of the future" moto CSS */
+.moto {
+  grid-column: 3 / span 6;
+  color: rgb(200, 166, 80);
+  margin-top: 3rem;
+}
+
+/*  CSS targeting all nav buttons and styling them accordingly */
+[class*="nav-"] {
+  color: aliceblue;
+  background-color: rgba(178, 29, 56, 0.3);
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: solid;
+  border-width: 0.1rem;
+  border-color: rgb(200, 166, 80);
+}
+
+/* CSS to place all nav-buttons into the grid area. */
+.nav-button1 {
+  grid-column: 9 / span 2;
+}
+.nav-button2 {
+  grid-column: 11 / span 2;
+}
+.nav-button3 {
+  grid-column: 13 / span 2;
+}
+.nav-button4 {
+  grid-column: 15 / span 2;
+}
+
+/* button hover CSS */
+[class*="nav-"]:hover {
+  background-color: rgb(178, 29, 56);
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+/* @ media to create new layout when in tablet form */
+@media screen and (max-width: 1070px) {
+  .moto {
+    display: none;
+  }
+  .nav-button1 {
+    grid-column: 4 / span 3;
+  }
+  .nav-button2 {
+    grid-column: 7 / span 3;
+  }
+  .nav-button3 {
+    grid-column: 10 / span 3;
+  }
+  .nav-button4 {
+    grid-column: 13 / span 3;
+  }
+}
+
+/* @media to create new layout when out ob tablet mode */
+@media screen and (max-width: 720px) {
+  .header {
+    grid-row: 1 / -1;
+  }
+  .logo {
+    grid-column: 6 / -1;
+  }
+  .nav-button1 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .nav-button2 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .nav-button3 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .nav-button4 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+}
+
+/* main flag container css */
+.container-flag-1 {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../site-img/matrix.jpg);
+  margin-top: 12rem;
+  gap: 10px;
+  margin-right: 22rem;
+  margin-left: 22rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.3rem;
+}
+.scratch {
+  grid-column: 2 / span 3;
+}
+.p5js {
+  grid-column: 7 / span 3;
+}
+.pi {
+  grid-column: 12 / span 3;
+}
+
+/* @media for main flag CSS */
+
+@media screen and (max-width: 1350px) {
+  .scratch {
+    grid-column: 3 / span 3;
+    grid-row: 1;
+  }
+  .p5js {
+    grid-column: 10 / span 3;
+    grid-row: 1;
+  }
+  .pi {
+    grid-column: 6 / span 3;
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-flag-1 {
+    display: none;
+  }
+}
+
+/* artical main container CSS grid. */
+.container-main {
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+  grid-template-rows: repeat(16, auto);
+  background-color: rgba(214, 189, 125, 0.9);
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  /* margin-bottom: -3rem; */
+  padding-bottom: 1rem;
+}
+.artical-heading {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  color: white;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  font-size: 90px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  /* padding-right: 1rem; */
+  /* padding-left: 0.5rem; */
+}
+.artical-subheading {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  padding-left: 1rem;
+  color: white;
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.artical-auther-img {
+  display: grid;
+  grid-column: 12 / sapn 2;
+  grid-row: 3;
+  padding-left: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+.artical-auther-img img {
+  width: 10%;
+  height: 65%;
+  border-radius: 50%;
+}
+.artical-auther-name {
+  display: grid;
+  grid-column: 13 / span 6;
+  grid-row: 3;
+  padding-left: 2rem;
+  color: white;
+  font-size: 19px;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+.artical-content-p1 {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 7 / span 2;
+  font-size: 25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+.artical-content-p2 {
+  grid-column: 1 / -1;
+  grid-row: 10 / span 2;
+  font-size: 25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+.artical-content-p3 {
+  grid-column: 1 / -1;
+  grid-row: 12 / span 2;
+  font-size: 25px;
+  padding-right: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+.artical-content-p4 {
+  grid-column: 10 / -1;
+  grid-row: 4 / span 3;
+  font-size: 25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  margin-top: 0.4rem;
+}
+.artical-content-p5 {
+  grid-column: 10 / -1;
+  grid-row: 7 / span 3;
+  font-size: 25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  margin-top: 0.4rem;
+}
+.artical-content-p6 {
+  grid-column: 10 / -1;
+  grid-row: 10 / span 3;
+  font-size: 25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  margin-top: 0.4rem;
+}
+.artical-img-1 {
+  display: grid;
+  grid-column: 6 / span 12;
+  grid-row: 9;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.artical-img-2 {
+  display: grid;
+  grid-column: 6 / span 12;
+  grid-row: 12;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.artical-img-3 {
+  /* display: grid; */
+  grid-column: 3 / span 12;
+  grid-row: 15;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 15rem;
+}
+
+.raspberrypi-news-img {
+  grid-column: 1 / span 6;
+  grid-row: 4 / -1;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+.raspberrypi-news-img img {
+  width: 140%;
+  height: 100%;
+}
+.artical-img-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.artical-img-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.artical-img-3 img {
+  width: 90%;
+  height: 80%;
+}
+
+.artical-blocks-list {
+  display: grid;
+  grid-column: 2 / -1;
+  grid-row: 13;
+  font-size: 25px;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 1350px) {
+  .raspberrypi-news-img {
+    grid-column: 6 /-1;
+    grid-row: 4;
+  }
+  .raspberrypi-news-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .artical-content-p4 {
+    grid-column: 1 / -1;
+    grid-row: 6 / span 3;
+    font-size: 25px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    margin-top: 0.4rem;
+  }
+  .artical-content-p5 {
+    grid-column: 1 / -1;
+    grid-row: 9 / span 3;
+    font-size: 25px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    margin-top: 0.4rem;
+  }
+  .artical-content-p6 {
+    grid-column: 1 / -1;
+    grid-row: 12 / span 3;
+    font-size: 25px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    margin-top: 0.4rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container-main {
+    margin-top: 13rem;
+  }
+  .raspberrypi-news-img {
+    grid-column: 2 /-1;
+    grid-row: 4;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container-main {
+    margin-top: 24rem;
+  }
+  .raspberrypi-news-img {
+    grid-column: 1 /-1;
+    grid-row: 4;
+  }
+}
+
+/* fotter grid ans CSS */
+.grid-container-footer {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: auto auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* background-color: blanchedalmond; */
+  margin-top: 3rem;
+}
+
+/* Get In Touch (GIT) phone */
+.GIT-phone {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  margin-top: 2rem;
+}
+.GIT-phonenumber {
+  grid-column: 2 / sapn 3;
+  grid-row: 2;
+  margin-bottom: 2rem;
+}
+
+/* GIT mail */
+.GIT-mail {
+  grid-column: 5 / span 2;
+  grid-row: 1;
+  margin-top: 2rem;
+}
+.GIT-address {
+  grid-column: 5 / span 2;
+  grid-row: 2;
+  margin-bottom: 2rem;
+}
+
+/* GIT social media */
+.GIT-social {
+  grid-column: 8 / span 3;
+  grid-row: 1;
+  margin-top: 2rem;
+}
+
+/* multi target GIT-for font change */
+[class*="GIT-"] {
+  font-size: 15px;
+  color: rgb(200, 166, 80);
+}
+[class*="artical-"] {
+  letter-spacing: 1px;
+}
+/* Registation form CSS */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+.container {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(200, 166, 80, 0.9);
+  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border-radius: 3rem;
+}
+.container .title {
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 160px;
+  background: rgb(178, 29, 56);
+}
+.container form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-width: 3px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: rgb(178, 29, 56);
+}
+
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+form .gender-details .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+.gender-details .category label {
+  display: flex;
+  align-items: center;
+}
+.gender-details .category .dot {
+  height: 18px;
+  width: 18px;
+  background: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  border-color: white;
+  background: rgb(178, 29, 56);
+}
+form input[type="radio"] {
+  display: none;
+}
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: rgb(178, 29, 56);
+}
+@media (max-width: 1300px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .gender-details .category {
+    width: 100%;
+  }
+  .container form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    margin-top: 13rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .container {
+    margin-top: 24rem;
+  }
+}

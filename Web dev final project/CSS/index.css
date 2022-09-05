@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+.nav-button1 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+}
+
+.nav-button2 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+}
+
+.nav-button3 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+}
+
+.nav-button4 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+}
+
+/* body container for page grid */
+.grid-container-body {
+  background-attachment: fixed;
+  background-image: url(../site-img/bgimage4.png);
+  background-repeat: no-repeat;
+  background-size: 1800px 1800px;
+}
+
+/* header container and CSS for background */
+.header {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
+
+/* logo CSS  */
+.logo {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  border-radius: 5rem;
+  margin: 1rem;
+}
+
+/* "coders of the future" moto CSS */
+.moto {
+  grid-column: 3 / span 6;
+  color: rgb(200, 166, 80);
+  margin-top: 3rem;
+}
+
+/*  CSS targeting all nav buttons and styling them accordingly */
+[class*="nav-"] {
+  color: aliceblue;
+  background-color: rgba(178, 29, 56, 0.3);
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: solid;
+  border-width: 0.1rem;
+  border-color: rgb(200, 166, 80);
+}
+
+/* CSS to place all nav-buttons into the grid area. */
+.nav-button1 {
+  grid-column: 9 / span 2;
+}
+.nav-button2 {
+  grid-column: 11 / span 2;
+}
+.nav-button3 {
+  grid-column: 13 / span 2;
+}
+.nav-button4 {
+  grid-column: 15 / span 2;
+}
+
+/* button hover CSS */
+[class*="nav-"]:hover {
+  background-color: rgb(178, 29, 56);
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+/* @ media to create new layout when in tablet form */
+@media screen and (max-width: 1070px) {
+  .moto {
+    display: none;
+  }
+  .nav-button1 {
+    grid-column: 4 / span 3;
+  }
+  .nav-button2 {
+    grid-column: 7 / span 3;
+  }
+  .nav-button3 {
+    grid-column: 10 / span 3;
+  }
+  .nav-button4 {
+    grid-column: 13 / span 3;
+  }
+}
+
+/* @media to create new layout when out ob tablet mode */
+@media screen and (max-width: 720px) {
+  .header {
+    grid-row: 1 / -1;
+  }
+  .logo {
+    grid-column: 6 / -1;
+  }
+  .nav-button1 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .nav-button2 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .nav-button3 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .nav-button4 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+}
+
+/* main flag container css */
+.container-flag-1 {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../site-img/matrix.jpg);
+  margin-top: 3rem;
+  gap: 10px;
+  margin-right: 22rem;
+  margin-left: 22rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.3rem;
+}
+.scratch {
+  grid-column: 2 / span 3;
+}
+.p5js {
+  grid-column: 7 / span 3;
+}
+.pi {
+  grid-column: 12 / span 3;
+}
+
+/* @media for main flag CSS */
+
+@media screen and (max-width: 1350px) {
+  .scratch {
+    grid-column: 3 / span 3;
+    grid-row: 1;
+  }
+  .p5js {
+    grid-column: 10 / span 3;
+    grid-row: 1;
+  }
+  .pi {
+    grid-column: 6 / span 3;
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-flag-1 {
+    display: none;
+  }
+}
+
+/* main artical-1 CSS */
+.container-main-1 {
+  display: grid;
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-template-columns: repeat(16, 1fr);
+  grid-column: 1 / -1;
+}
+
+.articals-1 {
+  display: grid;
+  position: relative;
+  grid-column: 2 / span 12;
+  grid-template-columns: 3;
+  grid-template-rows: 3;
+  gap: 5px;
+  margin-top: 3rem;
+  background-color: rgba(99, 5, 22, 0.8);
+  padding-bottom: 1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.5;
+  border-radius: 1rem;
+  text-decoration: none;
+  /* box-shadow: 10px 10px 25px; */
+}
+
+.artical-image-1 {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  padding-top: 0.8rem;
+  padding-left: 0.5rem;
+}
+.artical-heading-1 {
+  grid-row: 1;
+  grid-column: 2 / span 2;
+  color: aliceblue;
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
+}
+.artical-text-1 {
+  grid-row: 2;
+  grid-column: 2 / span 2;
+  color: aliceblue;
+  margin-left: 0.7rem;
+  font-size: 20px;
+}
+
+/* main artical 2 CSS */
+.container-main-2 {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-column: 1 / -1;
+}
+
+/* artical 2 CSS */
+.articals-2 {
+  display: grid;
+  position: relative;
+  grid-column: 4 / span 12;
+  grid-template-columns: 3;
+  grid-template-rows: 3;
+  gap: 5px;
+  margin-top: 3rem;
+  background-color: rgba(99, 5, 22, 0.8);
+  padding-bottom: 1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.5;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.artical-image-2 {
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  padding-top: 0.8rem;
+  margin-right: 0.5rem;
+}
+.artical-heading-2 {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  color: aliceblue;
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
+}
+.artical-text-2 {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  color: aliceblue;
+  margin-left: 0.7rem;
+  font-size: 20px;
+}
+
+/* artical 3 CSS */
+.container-main-3 {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-column: 1 / -1;
+}
+
+.articals-3 {
+  display: grid;
+  position: relative;
+  grid-column: 2 / span 12;
+  grid-template-columns: 3;
+  grid-template-rows: 3;
+  gap: 5px;
+  margin-top: 3rem;
+  background-color: rgba(99, 5, 22, 0.8);
+  padding-bottom: 1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.5;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+.artical-image-3 {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  padding-top: 0.8rem;
+  padding-left: 0.5rem;
+}
+.artical-heading-3 {
+  grid-row: 1;
+  grid-column: 2 / span 2;
+  color: aliceblue;
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
+}
+.artical-text-3 {
+  grid-row: 2;
+  grid-column: 2 / span 2;
+  color: aliceblue;
+  margin-left: 0.7rem;
+  font-size: 20px;
+}
+
+/* challenges content CSS */
+.container-main-challenges {
+  display: grid;
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-template-columns: repeat(16, 1fr);
+  grid-column: 1 / -1;
+}
+
+/* artical 2 CSS */
+.challenge {
+  display: grid;
+  position: relative;
+  grid-column: 4 / span 12;
+  grid-template-columns: 3;
+  grid-template-rows: 3;
+  gap: 5px;
+  margin-top: 3rem;
+  background-color: rgba(99, 5, 22, 0.8);
+  padding-bottom: 1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.5;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+.artical-image-challenges {
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  padding-top: 0.8rem;
+  margin-right: 0.5rem;
+}
+.artical-heading-challenges {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  color: aliceblue;
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
+}
+.artical-text-challenges {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  color: aliceblue;
+  margin-left: 0.7rem;
+  font-size: 20px;
+}
+
+[class*="articals-"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 1rem;
+  z-index: -1;
+  background-color: rgb(99, 5, 22);
+  transition: transform 300ms ease-in;
+  transform: scaleX(0);
+  grid-column: 1 / span 3;
+}
+
+/* artical-1 mouse over and forcus  */
+[class*="articals-"]:hover::before,
+[class*="articals-"]:focus::before {
+  transform: scaleX(1);
+}
+/* pointer for hover */
+[class*="articals-"]:hover {
+  cursor: pointer;
+}
+/* index to insure that the text on the artical can be seen. */
+[class*="articals-"] {
+  z-index: 1;
+}
+
+/* effects for mouse over challenges artical */
+.challenge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 1rem;
+  z-index: -1;
+  background-color: rgb(99, 5, 22);
+  transition: transform 300ms ease-in;
+  transform: scaleX(0);
+  grid-column: 1 / span 3;
+}
+
+/* artical-1 mouse over and forcus  */
+.challenge:hover::before,
+.challenge:focus::before {
+  transform: scaleX(1);
+}
+/* pointer for hover */
+.challenge:hover {
+  cursor: pointer;
+  /* top: -50px; */
+}
+/* index to insure that the text on the artical can be seen. */
+.challenge {
+  z-index: 1;
+}
+/* @media for all articales when in mobile size */
+@media screen and (max-width: 720px) {
+  /* .artical-1 {
+    grid-column: 1 / span 2;
+  } */
+  [class*="articals-"] {
+    grid-column: 1 / -1;
+  }
+  [class*="artical-image"] {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
+  [class*="artical-heading"] {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  [class*="artical-text"] {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+  .challenge {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+}
+
+/* main artical @media CSS */
+@media screen and (max-width: 1200px) {
+  .artical-1 {
+    margin-top: 12rem;
+  }
+}
+
+/* footer CSS */
+.grid-container-footer {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: auto auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* background-color: blanchedalmond; */
+  margin-top: 3rem;
+}
+
+/* Get In Touch (GIT) phone */
+.GIT-phone {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  margin-top: 2rem;
+}
+.GIT-phonenumber {
+  grid-column: 2 / sapn 3;
+  grid-row: 2;
+  margin-bottom: 2rem;
+}
+
+/* GIT mail */
+.GIT-mail {
+  grid-column: 5 / span 2;
+  grid-row: 1;
+  margin-top: 2rem;
+}
+.GIT-address {
+  grid-column: 5 / span 2;
+  grid-row: 2;
+  margin-bottom: 2rem;
+}
+
+/* GIT social media */
+.GIT-social {
+  grid-column: 8 / span 3;
+  grid-row: 1;
+  margin-top: 2rem;
+}
+
+/* multi target GIT-for font change */
+[class*="GIT-"] {
+  font-size: 15px;
+  color: rgb(200, 166, 80);
+}
